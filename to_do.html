@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <script>
+      function myFunction1(){
+        document.getElementById("demo1").innerHTML="DONE";
+      }
+      function myFunction2(){
+        document.getElementById("demo2").innerHTML="DONE";
+      }
+      function myFunction3(){
+        document.getElementById("demo3").innerHTML="DONE";
+      }
+      function myFunction4(){
+        document.getElementById("demo4").innerHTML="DONE";
+      }
+      </script>
+    <style> 
+    .box{
+      width: 360px;
+    }
+    #inputField{
+    width: 300px;
+    height: 46px;
+    border: 1px solid chocolate;
+    outline: none;
+    font-size: 25px;
+    vertical-align: middle;
+}
+#addToDo{
+    width: 50px;
+    height: 50px;
+    border: 1px solid chocolate;
+    outline: none;
+    font-size: 30px;
+    vertical-align: middle;    
+}
+.to-dos{
+    margin-top: 25px;
+
+}
+.paragraph-styling{
+    margin:0;
+    cursor: pointer;
+    font-size: 20px;
+}
+    h1{
+      color:aqua;
+      text-align: center;
+    }
+    h2{
+      color:aqua;
+      text-align: center;
+    }
+    .box{
+      padding-left:38%;
+    }
+    body{
+        background-color: #e91b7b;
+    }
+    .container{
+    position:absolute;
+    justify-content: center;
+    align-items:center;
+    top: 50%;
+    width :10%;
+    margin:auto;
+    border: 3px solid #7ddd0f;
+    background-color: #aac6c6;
+    box-shadow: 0px 0px 15px yellow;
+} 
+        /* The container */
+        .container {
+          display: block;
+          padding-top: 10px;
+          padding-left: 35px;
+          margin-bottom: 12px;
+          position:relative;
+          cursor: pointer;
+          font-size: 22px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+        
+        /* Hide the browser's default checkbox */
+        .container input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+        
+        /* Create a custom checkbox */
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 25px;
+          width: 25px;
+          background-color: whitesmoke;
+        }
+        
+        /* On mouse-over, add a grey background color */
+        .container:hover input ~ .checkmark {
+          background-color: black;
+        }
+        
+        /* When the checkbox is checked, add a blue background */
+        .container input:checked ~ .checkmark {
+          background-color: yellow;
+        }
+        
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+          content: "";
+          position:absolute;
+          display: none;
+        }
+        
+        /* Show the checkmark when checked */
+        .container input:checked ~ .checkmark:after {
+          display: block;
+        }
+        
+        /* Style the checkmark/indicator */
+        .container .checkmark:after {
+          left: 9px;
+          top: 5px;
+          width: 5px;
+          height: 10px;
+          border: solid red;
+          border-width: 0 3px 3px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <h1> To Create a To Do List </h1>
+    <div class ="box">
+      <input id="inputField" type="text" placeholder="Enter The Task"><button id="addToDo">+</button>
+      <div class="to-dos" id= "toDoContainer"></div>
+  </div>
+  <script src ="Logic.js"></script>
+    <h2>CHECKMARK</h2>
+    <label class="container" id="demo1">Task_1
+      <input type="checkbox">
+      <span class="checkmark"></span>
+        <button type="button" onclick ="myFunction1()">Final Check</button>
+    </label>
+      
+    <label class="container" id="demo2">Task_2
+        <input type="checkbox">
+        <span class="checkmark"></span>
+        <button type="button" onclick ="myFunction2()">Final Check</button>
+    </label>
+      
+    <label class="container" id="demo3">Task_3
+        <input type="checkbox">
+        <span class="checkmark"></span>
+        <button type="button" onclick ="myFunction3()">Final Check</button>
+    </label>
+      
+    <label class="container" id="demo4">Task_4
+        <input type="checkbox">
+        <span class="checkmark"></span>
+        <button type="button" onclick ="myFunction4()">Final Check</button>
+    </label>
+    
+</body>
+</html>
